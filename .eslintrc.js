@@ -1,7 +1,19 @@
 module.exports = {
 	root: true,
-	extends: ['@react-native-community'],
-	plugins: ['import'],
+	parser: 'babel-eslint',
+	env: {
+		jest: true,
+		es6: true,
+	},
+	extends: ['@react-native-community', 'airbnb', 'prettier', 'prettier/react'],
+	plugins: [
+		'import',
+		'react',
+		'jsx-a11y',
+		'eslint-plugin-prettier',
+		'eslint-plugin-react',
+	],
+	rules: {},
 	settings: {
 		'import/resolver': {
 			node: {
