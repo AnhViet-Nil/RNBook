@@ -1,0 +1,22 @@
+{
+	"plugins": [
+		[
+			"module-resolver",
+			{
+				"root": ["./app"],
+				"extensions": [".js", ".ios.js", ".android.js"],
+				"alias": {
+					"_assets": "./app/assets",
+					"_component": "./app/component",
+					"_container": "./app/container",
+					"_language": "./app/language",
+					"_navigation": "./app/navigation",
+					"_redux": "./app/redux",
+					"_service": "./app/service",
+					"_style": "./app/style",
+					"_utils": "./app/utils"
+				}
+			}
+		]
+	]
+}
