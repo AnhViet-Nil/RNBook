@@ -1,0 +1,4 @@
+const SAVE_TOKEN = 'SAVE_TOKEN';
+const REMOVE_TOKEN = 'REMOVE_TOKEN';
+
+export { SAVE_TOKEN, REMOVE_TOKEN };
