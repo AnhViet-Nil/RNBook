@@ -13,7 +13,21 @@ module.exports = {
 		'eslint-plugin-prettier',
 		'eslint-plugin-react',
 	],
-	rules: {},
+	rules: {
+		'react/prop-types': 0,
+		'react/prefer-stateless-function': [0],
+		'react/destructuring-assignment': [
+			0,
+			'always',
+			{ ignoreClassFields: true },
+		],
+		'react/jsx-curly-brace-presence': [
+			1,
+			{ props: 'always', children: 'always' },
+		],
+		'react/jsx-filename-extension': [1, { allow: 'as-needed' }],
+		'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+	},
 	settings: {
 		'import/resolver': {
 			node: {
