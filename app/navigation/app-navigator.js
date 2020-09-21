@@ -9,7 +9,7 @@ import RouteTab from './tab-navigator';
 const RootApp = createStackNavigator();
 
 const RouteApp = ({ routeName }) => (
-	<RootApp.Navigator>
+	<RootApp.Navigator screenOptions={{ animationEnabled: false }}>
 		{routeName ? (
 			<>
 				<RootApp.Screen name={Routes.ROUTE_TAB} component={RouteTab} />
