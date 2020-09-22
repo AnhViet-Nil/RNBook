@@ -1,6 +1,8 @@
 import React from 'react';
 import { SafeAreaView, Button, StyleSheet } from 'react-native';
 
+import { GoogleSignin } from '@react-native-community/google-signin';
+
 import { connect } from 'react-redux';
 import * as actions from 'redux/actions';
 
@@ -14,14 +16,20 @@ const styles = StyleSheet.create({
 });
 
 class Home extends React.Component {
-	handleNavigateAuth = () => {
-		this.props.removeToken();
+	handleSignOutGoogle = async () => {
+		try {
+			await GoogleSignin.revokeAccess();
+			await GoogleSignin.signOut();
+			this.props.removeInfoUser();
+		} catch (error) {
+			console.log('Logout Error', error);
+		}
 	};
 
 	render() {
 		return (
 			<SafeAreaView style={styles.view_screen}>
-				<Button title={'logout'} onPress={this.handleNavigateAuth} />
+				<Button title={'logout'} onPress={this.handleSignOutGoogle} />
 			</SafeAreaView>
 		);
 	}
