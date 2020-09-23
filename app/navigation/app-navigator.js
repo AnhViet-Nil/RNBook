@@ -8,19 +8,19 @@ import RouteTab from './tab-navigator';
 
 const RootApp = createStackNavigator();
 
-const RouteApp = ({ routeName }) => (
+const RouteApp = ({ userID }) => (
 	<RootApp.Navigator screenOptions={{ animationEnabled: false }}>
-		{routeName ? (
-			<>
-				<RootApp.Screen name={Routes.ROUTE_TAB} component={RouteTab} />
-				<RootApp.Screen name={Routes.BOOK} component={Screen.Home} />
-			</>
-		) : (
+		{userID == null ? (
 			<RootApp.Screen
 				name={Routes.ROUTE_AUTH}
 				options={{ headerShown: false }}
 				component={Screen.Login}
 			/>
+		) : (
+			<>
+				<RootApp.Screen name={Routes.ROUTE_TAB} component={RouteTab} />
+				<RootApp.Screen name={Routes.BOOK} component={Screen.Home} />
+			</>
 		)}
 	</RootApp.Navigator>
 );

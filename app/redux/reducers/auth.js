@@ -1,18 +1,33 @@
-import { SAVE_TOKEN, REMOVE_TOKEN } from 'redux/actions/types';
+import { SAVE_INFO_USER, REMOVE_INFO_USER } from 'redux/actions/types';
 
 const initialState = {
-	token: null,
+	infoUser: {
+		id: null,
+		email: null,
+		avatar: null,
+		name: null,
+	},
 };
 
 function Auth(state = initialState, action) {
 	switch (action.type) {
-		case SAVE_TOKEN:
+		case SAVE_INFO_USER:
 			return {
-				token: action.token,
+				infoUser: {
+					id: action.id,
+					email: action.email,
+					avatar: action.avatar,
+					name: action.name,
+				},
 			};
-		case REMOVE_TOKEN:
+		case REMOVE_INFO_USER:
 			return {
-				token: null,
+				infoUser: {
+					id: null,
+					email: null,
+					avatar: null,
+					name: null,
+				},
 			};
 		default:
 			return state;

@@ -19,7 +19,7 @@ class Navigation extends React.Component {
 	render() {
 		return (
 			<NavigationContainer>
-				<RouteApp routeName={this.props.token} />
+				<RouteApp userID={this.props.userID} />
 			</NavigationContainer>
 		);
 	}
@@ -27,7 +27,7 @@ class Navigation extends React.Component {
 
 const mapStateToProps = (state) => {
 	return {
-		token: state.auth.token,
+		userID: state.auth.infoUser.id,
 	};
 };
 

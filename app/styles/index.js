@@ -1,7 +1,8 @@
 import Color from './color'; // Colors pallet
-import Image from './image'; // Image require
+import Photo from './photo'; // Image require
 import Mixins from './mixins'; // Mixins to use CSSinJS
-import Spacing from './spacing'; // Paddings, margins and scale
+import StyleView from './styleView'; // Style common view
+import StyleText from './styleText';
 import Typography from './typography'; // Fonts types and sizes
 
-export { Color, Image, Spacing, Typography, Mixins };
+export { Color, Photo, StyleView, StyleText, Typography, Mixins };

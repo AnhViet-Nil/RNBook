@@ -4,12 +4,10 @@ import { Dimensions, PixelRatio } from 'react-native';
 const baseWidthX = 375;
 const baseHeightX = 812;
 
-const { WINDOW_WIDTH, WINDOW_HEIGHT } = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
-const scaleSizeHeight = (size) =>
-	Math.round((WINDOW_HEIGHT / baseWidthX) * size);
-const scaleSizeWidth = (size) =>
-	Math.round((WINDOW_WIDTH / baseHeightX) * size);
+const scaleSizeHeight = (size) => Math.round((height * size) / baseHeightX);
+const scaleSizeWidth = (size) => Math.round((width * size) / baseWidthX);
 
 const scaleFont = (size) => size * PixelRatio.getFontScale();
 
@@ -46,7 +44,7 @@ const boxShadow = (
 	};
 };
 
-export {
+const Mixins = {
 	margin,
 	padding,
 	boxShadow,
@@ -54,3 +52,5 @@ export {
 	scaleSizeHeight,
 	scaleSizeWidth,
 };
+
+export default Mixins;

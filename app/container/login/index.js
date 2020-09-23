@@ -1,30 +1,24 @@
 import React from 'react';
-import { SafeAreaView, Button, StyleSheet } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 
-import { connect } from 'react-redux';
-import * as actions from 'redux/actions';
+import { StyleView } from 'styles';
 
-import { Color } from 'styles';
+import ViewBanner from './viewBanner';
+import ViewInfo from './viewInfo';
+import ViewAction from './viewAction';
 
 const styles = StyleSheet.create({
-	view_screen: {
-		flex: 1,
-		backgroundColor: Color.WHITE,
-	},
+	...StyleView,
 });
 
-class Login extends React.Component {
-	handleNavigateApp = () => {
-		this.props.saveToken('token');
-	};
-
+export default class Login extends React.Component {
 	render() {
 		return (
 			<SafeAreaView style={styles.view_screen}>
-				<Button title={'login'} onPress={this.handleNavigateApp} />
+				<ViewBanner />
+				<ViewInfo />
+				<ViewAction />
 			</SafeAreaView>
 		);
 	}
 }
-
-export default connect(null, actions)(Login);

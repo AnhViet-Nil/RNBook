@@ -3,7 +3,7 @@ import { Image } from 'react-native';
 
 import PropTypes from 'prop-types';
 
-export default class IconTab extends React.Component {
+export default class Icon extends React.Component {
 	render() {
 		const { style, size, source, resizeMode } = this.props;
 		return (
@@ -16,14 +16,14 @@ export default class IconTab extends React.Component {
 	}
 }
 
-IconTab.propTypes = {
+Icon.propTypes = {
 	size: PropTypes.number,
 	source: PropTypes.node.isRequired,
 	resizeMode: PropTypes.string,
 	style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 };
 
-IconTab.defaultProps = {
+Icon.defaultProps = {
 	size: 24,
 	resizeMode: 'contain',
 	style: {},
