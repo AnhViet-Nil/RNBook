@@ -47,12 +47,10 @@ export default {
 		timeHistory: 'Thời gian mượn sách',
 	},
 	login: {
-		nameApp: 'V-BOOKS',
-		vnexTers: 'VNEXTers',
-		introductoryFirst: 'ra đời với sứ mệnh giúp ',
-		introductoryLast:
-			' trau dồi và nâng cao kiến thức, giải trí sau những giờ làm việc căng thằng',
-		guide: 'Đăng nhập bằng Gmail Vnext',
+		welcome: 'Welcome to Book',
+		introductory:
+			'ra đời với sứ mệnh giúp các bạn trẻ nâng cao kiến thức, giải trí sau những giờ làm việc căng thằng',
+		guide: 'Đăng nhập bằng Gmail Google',
 	},
 	home: {
 		searchPlaceholder: 'Tìm kiếm sách',

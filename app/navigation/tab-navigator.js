@@ -3,11 +3,11 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { Image, Color } from 'styles';
+import { Photo, Color } from 'styles';
 import I18n from 'language';
 
 import * as Screen from 'container';
-import { IconTab } from 'component';
+import { Icon } from 'component';
 
 import Routes from './routes';
 
@@ -38,24 +38,24 @@ const tabs = [
 		name: Routes.TAB_HOME,
 		component: StackHome,
 		label: I18n.t('tab.home'),
-		iconActive: Image.HOME_ACTIVE,
-		iconInactive: Image.HOME_INACTIVE,
+		iconActive: Photo.HOME_ACTIVE,
+		iconInactive: Photo.HOME_INACTIVE,
 	},
 	{
 		id: 1,
 		name: Routes.TAB_QR_CODE,
 		component: StackQRCode,
 		label: I18n.t('tab.qrCode'),
-		iconActive: Image.QR_CODE_ACTIVE,
-		iconInactive: Image.QR_CODE_INACTIVE,
+		iconActive: Photo.QR_CODE_ACTIVE,
+		iconInactive: Photo.QR_CODE_INACTIVE,
 	},
 	{
 		id: 2,
 		name: Routes.TAB_USER,
 		component: StackUser,
 		label: I18n.t('tab.user'),
-		iconActive: Image.USER_ACTIVE,
-		iconInactive: Image.USER_INACTIVE,
+		iconActive: Photo.USER_ACTIVE,
+		iconInactive: Photo.USER_INACTIVE,
 	},
 ];
 
@@ -64,7 +64,7 @@ const RouteTab = () => (
 		initialRouteName={Routes.TAB_HOME}
 		tabBarOptions={{
 			activeTintColor: Color.ORANGE,
-			inactiveTintColor: Color.GRAY,
+			inactiveTintColor: Color.GRAY_DARK,
 		}}>
 		{tabs.map((tab) => (
 			<RootTab.Screen
@@ -74,7 +74,7 @@ const RouteTab = () => (
 				options={{
 					tabBarLabel: tab.label,
 					tabBarIcon: ({ focused }) => (
-						<IconTab source={focused ? tab.iconActive : tab.iconInactive} />
+						<Icon source={focused ? tab.iconActive : tab.iconInactive} />
 					),
 				}}
 			/>

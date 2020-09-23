@@ -1,4 +1,4 @@
-import { scaleFont } from './mixins';
+import Mixins from './mixins';
 
 // Font Family
 const FONT_FAMILY_REGULAR = 'AvenirNext-Regular';
@@ -7,38 +7,21 @@ const FONT_FAMILY_ITALIC = 'AvenirNext-Italic';
 const FONT_FAMILY_MEDIUM = 'AvenirNext-Medium';
 const FONT_FAMILY_MEDIUM_ITALIC = 'AvenirNext-MediumItalic';
 
-// Font Weight
-const FONT_WEIGHT_REGULAR = '400';
-const FONT_WEIGHT_BOLD = '700';
-
 // Font Size
-const FONT_SIZE_16 = scaleFont(16);
-const FONT_SIZE_14 = scaleFont(14);
+const FONT_SIZE_24 = Mixins.scaleFont(24);
+const FONT_SIZE_16 = Mixins.scaleFont(16);
+const FONT_SIZE_14 = Mixins.scaleFont(14);
+const FONT_SIZE_12 = Mixins.scaleFont(12);
 
-// Line Height
-const LINE_HEIGHT_20 = scaleFont(20);
-const LINE_HEIGHT_16 = scaleFont(16);
-
-// Font Style
-const FONT_REGULAR = {
-	fontFamily: FONT_FAMILY_REGULAR,
-	fontWeight: FONT_WEIGHT_REGULAR,
-};
-const FONT_BOLD = {
-	fontFamily: FONT_FAMILY_BOLD,
-	fontWeight: FONT_WEIGHT_BOLD,
-};
-
-export {
+const Typography = {
 	FONT_FAMILY_REGULAR,
 	FONT_FAMILY_BOLD,
 	FONT_FAMILY_ITALIC,
 	FONT_FAMILY_MEDIUM,
 	FONT_FAMILY_MEDIUM_ITALIC,
+	FONT_SIZE_24,
 	FONT_SIZE_16,
 	FONT_SIZE_14,
-	LINE_HEIGHT_20,
-	LINE_HEIGHT_16,
-	FONT_REGULAR,
-	FONT_BOLD,
+	FONT_SIZE_12,
 };
+export default Typography;

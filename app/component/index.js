@@ -1,4 +1,4 @@
-import IconTab from './image/iconTab';
+import Icon from './image/icon';
 import IconHeader from './image/iconHeader';
 
-export { IconTab, IconHeader };
+export { Icon, IconHeader };

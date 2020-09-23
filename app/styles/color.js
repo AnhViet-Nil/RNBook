@@ -2,7 +2,12 @@ const Color = {
 	BLACK: '#000000',
 	WHITE: '#FFFFFF',
 	ORANGE: '#FF9225',
-	GRAY: '#4E5D6A',
+	RED: '#DD4040',
+	WHITE_PALE: '#F0F4F8',
+	GRAY_LIGHT: '#A6BCD0',
+	GRAY: '#748A9D',
+	GRAY_DARK: '#4E5D6A',
+	GRAY_MIDNIGHT: '#404E5A',
 };
 
 export default Color;
